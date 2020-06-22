@@ -48,10 +48,10 @@ p city_populations
 # Write a method that prints out every number from 1 to 100. 
 
 def count_num
-  index = 1
-  while index <= 100
-    puts index
-    index += 1
+  num = 1
+  while num <= 100
+    puts num
+    num += 1
   end
 end
 
@@ -60,10 +60,10 @@ count_num
 # Write a method that prints out every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
 
 def skip_num
-  index = 1
-  while index <= 100
-    puts index
-    index += 2
+  num = 1
+  while num <= 100
+    puts num
+    num += 2
   end
 end
 

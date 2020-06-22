@@ -47,10 +47,10 @@ console.log(cityPopulations);
 // Write a method that prints out every number from 1 to 100. 
 
 function countNum() {
-  var index = 1;
-  while (index <= 100) {
-    console.log(index);
-    index += 1;
+  var num = 1;
+  while (num <= 100) {
+    console.log(num);
+    num += 1;
   }
 }
 countNum();
@@ -59,10 +59,10 @@ countNum();
 // Write a method that prints out every other number from 1 to 100. (That is, 1, 3, 5, 7 … 99).
 
 function skipNum() {
-  var index = 1;
-  while (index <= 100) {
-    console.log(index);
-    index += 2;
+  var num = 1;
+  while (num <= 100) {
+    console.log(num);
+    num += 2;
   }
 }
 skipNum();
@@ -84,15 +84,24 @@ console.log(selectNumber([55, 55, 55, 55, 88, 188, 53, 55, 90]));
 // Write a method that accepts an array of strings and returns a new array that has the string "awesomesauce" inserted between every string. 
 // For example, if the initial array is ["a", "b", "c", "d", "e"], then the returned array should be ["a", "awesomesauce", "b", "awesomesauce", "c", "awesomesauce", "d", "awesomesauce", "e"].
 
-var strings = ["a", "b", "c", "d", "e"];
-strings[1] = "awesome"
+// var strings = ["a", "b", "c", "d", "e"];
+// strings[1] = "awesome"
 
-console.log(strings);
+// console.log(strings);
 
-// function awesomeSauceArray(strings) {
-//   var index = 1;
-//   while (index < strings.length)
-// }
+function awesomeSauceArray(strings) {
+  var index = 1;
+  while (index < strings.length) {
+    if (strings[index] !== " ") {
+      strings.splice(index, 0, "awesome");
+      index += 1;
+    }
+    index += 1;
+  }
+  return strings;
+}
+
+console.log(awesomeSauceArray(["a", "b", "c", "d", "e"]));
 
 
 // Start with the hash: item_amounts = {chair: 5, table: 2}
